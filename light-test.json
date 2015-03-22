@@ -1,0 +1,137 @@
+[
+  {
+    "@type": "d",
+    "@rid": "#17:248",
+    "@version": 1,
+    "@class": "Event",
+    "eventId": 10249,
+    "createUserId": "stevehu",
+    "data": {
+      "sourceCode": "package com.networknt.light.rule.example.main.perf;\n\nimport com.networknt.light.rule.AbstractRule;\nimport com.networknt.light.rule.Rule;\nimport org.slf4j.LoggerFactory;\n\nimport java.util.Map;\n\n/**\n * Created by steve on 16/02/15.\n */\npublic class HelloWorld_1Rule extends AbstractRule implements Rule {\n    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(HelloWorldRule.class);\n    public boolean execute (Object ...objects) throws Exception {\n        Map<String, Object> inputMap = (Map<String, Object>) objects[0];\n        logger.debug(this.toString());\n        inputMap.put(\"result\", \"{\\\"message\\\": \\\"Hello World 1\\\"}\");\n        return true;\n    }\n}\n",
+      "createUserId": "stevehu",
+      "ruleClass": "com.networknt.light.rule.example.main.perf.HelloWorld_1Rule",
+      "createDate": "2015-03-22T22:58:31.585"
+    },
+    "name": "impRule",
+    "category": "rule",
+    "createDate": "2015-03-22T22:58:31.585",
+    "ipAddress": "127.0.0.1",
+    "@fieldTypes": "eventId=l,createDate=t"
+  },
+  {
+    "@type": "d",
+    "@rid": "#17:249",
+    "@version": 1,
+    "@class": "Event",
+    "eventId": 10250,
+    "createUserId": "stevehu",
+    "data": {
+      "sourceCode": "package com.networknt.light.rule.example.main.perf;\n\nimport com.networknt.light.rule.AbstractRule;\nimport com.networknt.light.rule.Rule;\nimport com.networknt.light.util.ServiceLocator;\nimport org.slf4j.LoggerFactory;\n\nimport java.util.*;\n\n/**\n * Created by steve on 02/02/15.\n */\npublic class HelloWorldRule extends AbstractRule implements Rule {\n    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(HelloWorldRule.class);\n    public boolean execute (Object ...objects) throws Exception {\n        Map<String, Object> inputMap = (Map<String, Object>) objects[0];\n        logger.debug(this.toString());\n        inputMap.put(\"result\", \"{\\\"message\\\": \\\"Hello World\\\"}\");\n        return true;\n    }\n}\n",
+      "createUserId": "stevehu",
+      "ruleClass": "com.networknt.light.rule.example.main.perf.HelloWorldRule",
+      "createDate": "2015-03-22T22:58:31.635"
+    },
+    "name": "impRule",
+    "category": "rule",
+    "createDate": "2015-03-22T22:58:31.635",
+    "ipAddress": "127.0.0.1",
+    "@fieldTypes": "eventId=l,createDate=t"
+  },
+  {
+    "@type": "d",
+    "@rid": "#17:250",
+    "@version": 1,
+    "@class": "Event",
+    "eventId": 10251,
+    "createUserId": "stevehu",
+    "data": {
+      "sourceCode": "package com.networknt.light.rule.demo;\n\nimport com.networknt.light.rule.AbstractRule;\nimport com.networknt.light.rule.Rule;\nimport org.slf4j.LoggerFactory;\n\nimport java.util.HashMap;\nimport java.util.Map;\n\n/**\n * Created by steve on 21/02/15.\n */\npublic class GetDropdownRule implements Rule {\n    public boolean execute (Object ...objects) throws Exception {\n        Map<String, Object> inputMap = (Map<String, Object>) objects[0];\n        inputMap.put(\"result\", \"[{\\\"value\\\":\\\"value1\\\",\\\"label\\\":\\\"label1\\\"},{\\\"value\\\":\\\"value2\\\",\\\"label\\\":\\\"label2\\\"},{\\\"value\\\":\\\"value3\\\",\\\"label\\\":\\\"label3\\\"}]\");\n        return true;\n    }\n\n}\n",
+      "createUserId": "stevehu",
+      "ruleClass": "com.networknt.light.rule.demo.GetDropdownRule",
+      "createDate": "2015-03-22T22:58:31.668"
+    },
+    "name": "impRule",
+    "category": "rule",
+    "createDate": "2015-03-22T22:58:31.668",
+    "ipAddress": "127.0.0.1",
+    "@fieldTypes": "eventId=l,createDate=t"
+  },
+  {
+    "@type": "d",
+    "@rid": "#17:0",
+    "@version": 1,
+    "@class": "Event",
+    "eventId": 10001,
+    "createUserId": "stevehu",
+    "data": {
+      "updateDate": "2015-03-14T15:05:06.871",
+      "accessLevel": "A",
+      "updateUserId": "stevehu",
+      "ruleClass": "com.networknt.light.rule.demo.GetDropdownRule"
+    },
+    "name": "updAccess",
+    "category": "access",
+    "createDate": "2015-03-14T15:05:06.871",
+    "ipAddress": "127.0.0.1",
+    "@fieldTypes": "eventId=l,createDate=t"
+  },
+  {
+    "@type": "d",
+    "@rid": "#17:251",
+    "@version": 1,
+    "@class": "Event",
+    "eventId": 10252,
+    "createUserId": "stevehu",
+    "data": {
+      "updateDate": "2015-03-22T23:02:36.773",
+      "accessLevel": "A",
+      "updateUserId": "stevehu",
+      "ruleClass": "com.networknt.light.rule.example.main.perf.HelloWorldRule"
+    },
+    "name": "updAccess",
+    "category": "access",
+    "createDate": "2015-03-22T23:02:36.773",
+    "ipAddress": "127.0.0.1",
+    "@fieldTypes": "eventId=l,createDate=t"
+  },
+  {
+    "@type": "d",
+    "@rid": "#17:1",
+    "@version": 1,
+    "@class": "Event",
+    "eventId": 10002,
+    "createUserId": "stevehu",
+    "data": {
+      "enableCors": true,
+      "updateDate": "2015-03-14T15:05:28.542",
+      "updateUserId": "stevehu",
+      "ruleClass": "com.networknt.light.rule.demo.GetDropdownRule"
+    },
+    "name": "updCors",
+    "category": "rule",
+    "createDate": "2015-03-14T15:05:28.541",
+    "ipAddress": "127.0.0.1",
+    "@fieldTypes": "eventId=l,createDate=t"
+  },
+  {
+    "@type": "d",
+    "@rid": "#17:253",
+    "@version": 1,
+    "@class": "Event",
+    "eventId": 10254,
+    "createUserId": "stevehu",
+    "data": {
+      "updateDate": "2015-03-22T23:14:18.116",
+      "updateUserId": "stevehu",
+      "enableEtag": true,
+      "ruleClass": "com.networknt.light.rule.demo.GetDropdownRule",
+      "cacheControl": "max-age=600"
+    },
+    "name": "updEtag",
+    "category": "rule",
+    "createDate": "2015-03-22T23:14:18.116",
+    "ipAddress": "127.0.0.1",
+    "@fieldTypes": "eventId=l,createDate=t"
+  }
+
+]
